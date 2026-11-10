@@ -7,11 +7,19 @@ authors = [
     { name = "andrei", email = "mariciucandreimm@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
-
-[project.scripts]
-ml-examples = "ml_examples:main"
+dependencies = [
+    "numpy>=2.4.6",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "torch>=2.15.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.11.2",
+]
